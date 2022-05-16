@@ -4,10 +4,9 @@ public class AllConversions
 
     public static void main(String[] args) 
     {
-
         Scanner sc = new Scanner(System.in);
         boolean endLoop1 = false, endLoop2 = false;
-        String string;
+        String str;
 
         while(endLoop1 == false)
         {
@@ -19,29 +18,48 @@ public class AllConversions
                 //upperCase
                 case 1:
                     System.out.println("Input String:");
-                    string = sc.nextLine();
-                    System.out.println("String = " + string.toUpperCase() + "\n\n");
+                    str = sc.nextLine();
+                    System.out.println("String = " + str.toUpperCase() + "\n\n");
                     break;
                 //lowerCase
                 case 2:
                     System.out.println("Input String:");
-                    string = sc.nextLine();
-                    System.out.println("String = " + string.toLowerCase() + "\n\n");
+                    str = sc.nextLine();
+                    System.out.println("String = " + str.toLowerCase() + "\n\n");
                     break;
                 //hasNumber
                 case 3:
                     System.out.println("Input String:");
-                    string = sc.nextLine();
+                    str = sc.nextLine();
+
+                    StringNumber.checkForNums(str);
 
                     break;    
                 //isNumber
                 case 4:
                     System.out.println("Input String:");
-                    string = sc.nextLine();
+                    str = sc.nextLine();
 
+                    StringNumber.checkIfNum(str);
                     break;
                 //Conversions.
                 case 5:
+                    System.out.println("Input String:");
+                    str = sc.nextLine();
+                    System.out.println("[L]owerCase or [U]pperCase");
+                    String str2 = sc.nextLine();
+                    if (str2.equals("L"))
+                    {
+                        StringNumber.removeNumsToCase(str,true);
+                    }
+                    else if (str2.equals("U"))
+                    {
+                        StringNumber.removeNumsToCase(str,false);
+                    }
+                    else
+                    {
+                        System.out.println("Input error. Please try again");
+                    }
                     break;
                 default:
                     System.out.println("Wrong input. Please try again");
