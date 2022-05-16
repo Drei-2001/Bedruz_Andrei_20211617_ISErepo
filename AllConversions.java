@@ -1,15 +1,15 @@
 import java.util.*;
-public class Conversions
+public class AllConversions
 {
 
     public static void main(String[] args) 
     {
 
         Scanner sc = new Scanner(System.in);
-        boolean endLoop = false;
+        boolean endLoop1 = false, endLoop2 = false;
         String string;
 
-        while(endLoop == false)
+        while(endLoop1 == false)
         {
             Options();
             int choice1 = sc.nextInt();
@@ -47,8 +47,27 @@ public class Conversions
                     System.out.println("Wrong input. Please try again");
                     break;
                 case 6:
-                    endLoop = true;
+                    endLoop1 = true;
             }
+            System.out.println("would you like to print more?[Y/N]");
+            String choice2 = sc.nextLine();
+            while(endLoop2 == false)
+            {
+                if (choice2.equals("Y"))
+                {
+                    endLoop2 = false;
+                }
+                else 
+                if (choice2.equals("N"))
+                {
+                    endLoop2 = true;
+                }
+                else
+                {
+                    System.out.println("Input Error");
+                }
+            }
+            
         }
         sc.close();
     }
