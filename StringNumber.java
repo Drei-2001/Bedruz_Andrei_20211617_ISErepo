@@ -32,13 +32,13 @@ public  class StringNumber
 
     public static void removeNumsToCase(String s, boolean lowerCase)
     {
-        StringBuilder sb = new StringBuilder(s);
         for(int i = 0;i < s.length();i++)
         {
             char currChar = s.charAt(i);
             if (Character.isDigit(currChar))
             {
-                sb.deleteCharAt(i);
+                String tempChar =  Character.toString(currChar);
+                s.replace(tempChar,"");
             }
         }
         
