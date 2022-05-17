@@ -70,28 +70,32 @@ public class AllConversions
                 case 6:
                     Options2();
                     int optionsTwo = sc.nextInt();
-                    double timeInput;
+                    double timeInput,timeResult;
                     switch(optionsTwo)
                     {
                         case 1:
                             System.out.println("Input Hours:");
                             timeInput = sc.nextInt();
-                            Conversions.hrToMin(timeInput);
+                            timeResult = Conversions.hrToMin(timeInput);
+                            System.out.println("Minutes = " + timeResult);
                             break;
                         case 2:
                             System.out.println("Input Minutes:");
                             timeInput = sc.nextInt();
-                            Conversions.minToHr(timeInput);
+                            timeResult = Conversions.minToHr(timeInput);
+                            System.out.println("hours = " + timeResult);
                             break;
                         case 3:
                             System.out.println("Input Minutes:");
                             timeInput = sc.nextInt();
-                            Conversions.hrToMin(timeInput);
+                            timeResult = Conversions.hrToMin(timeInput);
+                            System.out.println("seconds  = " + timeResult);
                             break;
                         case 4:
                             System.out.println("Input Seconds:");
                             timeInput = sc.nextInt();
-                            Conversions.minToHr(timeInput);
+                            timeResult = Conversions.minToHr(timeInput);
+                            System.out.println("Minutes = " + timeResult);
                             break;
                         default:
                             System.out.println("wrong Input. Please try again");
