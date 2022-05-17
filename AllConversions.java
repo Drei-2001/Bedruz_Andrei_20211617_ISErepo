@@ -4,9 +4,10 @@ public class AllConversions
 
     public static void main(String[] args) 
     {
+
         Scanner sc = new Scanner(System.in);
-        boolean endLoop1 = false, endLoop2 = false;
-        String str;
+        boolean endLoop1 = false;
+        String string;
 
         while(endLoop1 == false)
         {
@@ -18,74 +19,41 @@ public class AllConversions
                 //upperCase
                 case 1:
                     System.out.println("Input String:");
-                    str = sc.nextLine();
-                    System.out.println("String = " + str.toUpperCase() + "\n\n");
+                    string = sc.nextLine();
+                    System.out.println("String = " + string.toUpperCase() + "\n\n");
                     break;
                 //lowerCase
                 case 2:
                     System.out.println("Input String:");
-                    str = sc.nextLine();
-                    System.out.println("String = " + str.toLowerCase() + "\n\n");
+                    string = sc.nextLine();
+                    System.out.println("String = " + string.toLowerCase() + "\n\n");
                     break;
                 //hasNumber
                 case 3:
                     System.out.println("Input String:");
-                    str = sc.nextLine();
-
-                    StringNumber.checkForNums(str);
+                    string = sc.nextLine();
 
                     break;    
                 //isNumber
                 case 4:
                     System.out.println("Input String:");
-                    str = sc.nextLine();
+                    string = sc.nextLine();
 
-                    StringNumber.checkIfNum(str);
                     break;
-                //Conversions.
+                //Remove Numbers and change case
                 case 5:
-                    System.out.println("Input String:");
-                    str = sc.nextLine();
-                    System.out.println("[L]owerCase or [U]pperCase");
-                    String str2 = sc.nextLine();
-                    if (str2.equals("L"))
-                    {
-                        StringNumber.removeNumsToCase(str,true);
-                    }
-                    else if (str2.equals("U"))
-                    {
-                        StringNumber.removeNumsToCase(str,false);
-                    }
-                    else
-                    {
-                        System.out.println("Input error. Please try again");
-                    }
                     break;
+
+                //Conversions.
+                case 6:
+                    break;
+                case 7:
+                    endLoop1 = true;
+                    break;                
                 default:
                     System.out.println("Wrong input. Please try again");
                     break;
-                case 6:
-                    endLoop1 = true;
-            }
-            System.out.println("would you like to print more?[Y/N]");
-            String choice2 = sc.nextLine();
-            while(endLoop2 == false)
-            {
-                if (choice2.equals("Y"))
-                {
-                    endLoop2 = false;
-                }
-                else 
-                if (choice2.equals("N"))
-                {
-                    endLoop2 = true;
-                }
-                else
-                {
-                    System.out.println("Input Error");
-                }
-            }
-            
+            }   
         }
         sc.close();
     }
@@ -100,7 +68,6 @@ public class AllConversions
         System.out.println("[5] Remove numbers in string and change case");
         System.out.println("[6] Conversion System (meters and feet/ centimeters to inches");
         System.out.println("[7] Exit");
-        System.out.println("[8] Exit");
     }
 
 }
