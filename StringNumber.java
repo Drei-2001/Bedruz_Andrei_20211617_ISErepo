@@ -6,12 +6,12 @@ public  class StringNumber
         // on to the next number.
         for(int i = 0;i < s.length();i++)
         {
-            try
+            char currChar = s.charAt(i);
+            if (Character.isDigit(currChar))
             {
-                char currChar = s.charAt(i);
-                int num = Character.getNumericValue(currChar);
-                System.out.println("Number" + num + " found at " + i + " place");
-            } catch (NumberFormatException e) {}
+                System.out.println("Number" + currChar + " found at " + i + " place");
+
+            }
         }
     }
 
@@ -35,12 +35,11 @@ public  class StringNumber
         StringBuilder sb = new StringBuilder(s);
         for(int i = 0;i < s.length();i++)
         {
-            try
+            char currChar = s.charAt(i);
+            if (Character.isDigit(currChar))
             {
-                char currChar = s.charAt(i);
-                int num = Character.getNumericValue(currChar);
                 sb.deleteCharAt(i);
-            } catch (NumberFormatException e) {}
+            }
         }
         
         if (lowerCase == true)
