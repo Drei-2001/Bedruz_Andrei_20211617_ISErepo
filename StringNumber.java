@@ -1,6 +1,6 @@
-public class StringNumber 
+public  class StringNumber 
 {
-    public void checkForNums(String s)
+    public static void checkForNums(String s)
     {
         //try to change each glyph in the string to a number. If an error occurs, move 
         // on to the next number.
@@ -15,7 +15,7 @@ public class StringNumber
         }
     }
 
-    public void checkIfNum(String s)
+    public static void checkIfNum(String s)
     {
         //a simpler version of checkForNums. Convert string to a float. If an error
         //occurs then the string cannot be a number.
@@ -30,7 +30,7 @@ public class StringNumber
         }
     }
 
-    public void removeNumsToCase(String s, boolean lowerCase)
+    public static void removeNumsToCase(String s, boolean lowerCase)
     {
         StringBuilder sb = new StringBuilder(s);
         for(int i = 0;i < s.length();i++)
