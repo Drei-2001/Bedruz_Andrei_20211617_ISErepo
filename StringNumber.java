@@ -6,10 +6,11 @@ public  class StringNumber
         // on to the next number.
         for(int i = 0;i < s.length();i++)
         {
+            int count  = i+1;
             char currChar = s.charAt(i);
             if (Character.isDigit(currChar))
             {
-                System.out.println("Number" + currChar + " found at " + i + " place");
+                System.out.println("Number " + currChar + " found at " + " place " + count);
 
             }
         }
@@ -32,23 +33,31 @@ public  class StringNumber
 
     public static void removeNumsToCase(String s, boolean lowerCase)
     {
-        for(int i = 0;i < s.length();i++)
+        StringBuilder sb = new StringBuilder(s);
+        int count = 0,size = sb.length();
+        while(count < size)
         {
-            char currChar = s.charAt(i);
+            char currChar = sb.charAt(count);
             if (Character.isDigit(currChar))
             {
-                String tempChar =  Character.toString(currChar);
-                s.replace(tempChar,"");
+                sb = sb.deleteCharAt(count);
+                size = sb.length();
             }
+            else 
+            {
+                count++;
+            }
+            System.out.println();
         }
         
         if (lowerCase == true)
         {
-            s.toLowerCase();
+            s = sb.toString().toLowerCase();
         }
         else if (lowerCase == false)
         {
-            s.toUpperCase();
+            s = sb.toString().toUpperCase();
         }
+        System.out.println("Final String = " + s);
     }
 }
