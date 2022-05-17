@@ -66,9 +66,37 @@ public class AllConversions
                     System.out.println("\n");
                     break;
 
-                //Conversions.
+                //Conversions
                 case 6:
-                    System.out.println("Input String:");
+                    Options2();
+                    int optionsTwo = sc.nextInt();
+                    double timeInput;
+                    switch(optionsTwo)
+                    {
+                        case 1:
+                            System.out.println("Input Hours:");
+                            timeInput = sc.nextInt();
+                            Conversions.hrToMin(timeInput);
+                            break;
+                        case 2:
+                            System.out.println("Input Minutes:");
+                            timeInput = sc.nextInt();
+                            Conversions.minToHr(timeInput);
+                            break;
+                        case 3:
+                            System.out.println("Input Minutes:");
+                            timeInput = sc.nextInt();
+                            Conversions.hrToMin(timeInput);
+                            break;
+                        case 4:
+                            System.out.println("Input Seconds:");
+                            timeInput = sc.nextInt();
+                            Conversions.minToHr(timeInput);
+                            break;
+                        default:
+                            System.out.println("wrong Input. Please try again");
+                            break;
+                    }
                     string = sc.nextLine();
                     System.out.println("\n");
 
@@ -95,6 +123,15 @@ public class AllConversions
         System.out.println("[5] Remove numbers in string and change case");
         System.out.println("[6] Conversion System (meters and feet/ centimeters to inches");
         System.out.println("[7] Exit");
+    }
+
+    public static void Options2()
+    {
+        System.out.println("Convertion System");
+        System.out.println("[1] Convert hours to minutes");
+        System.out.println("[2] Convert minutes to hours");
+        System.out.println("[3] Convert minutes to seconds");
+        System.out.println("[4] Convert seconds to minutes");
     }
 
 }
