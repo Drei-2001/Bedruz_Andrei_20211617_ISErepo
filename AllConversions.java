@@ -46,10 +46,32 @@ public class AllConversions
                     break;
                 //Remove Numbers and change case
                 case 5:
+                    System.out.println("Input String:");
+                    string = sc.nextLine();
+                    System.out.println("Change to [U]pperCase or [L]owerCase?");
+                    String inputTwo = sc.nextLine();
+                    if (inputTwo.equals("U"))
+                    {
+                    StringNumber.removeNumsToCase(string, false);
+
+                    }
+                    else if (inputTwo.equals("L"))
+                    {
+                        StringNumber.removeNumsToCase(string, true);
+                    }
+                    else 
+                    {
+                        System.out.println("Input incorrect.");
+                    }
+                    System.out.println("\n");
                     break;
 
                 //Conversions.
                 case 6:
+                    System.out.println("Input String:");
+                    string = sc.nextLine();
+                    System.out.println("\n");
+
                     break;
                 case 7:
                     endLoop1 = true;
