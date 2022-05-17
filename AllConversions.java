@@ -32,12 +32,16 @@ public class AllConversions
                 case 3:
                     System.out.println("Input String:");
                     string = sc.nextLine();
+                    StringNumber.checkForNums(string);
+                    System.out.println("\n");
 
                     break;    
                 //isNumber
                 case 4:
                     System.out.println("Input String:");
                     string = sc.nextLine();
+                    StringNumber.checkIfNum(string);
+                    System.out.println("\n");
 
                     break;
                 //Remove Numbers and change case
@@ -55,6 +59,7 @@ public class AllConversions
                     break;
             }   
         }
+        System.out.println("GoodBye!");
         sc.close();
     }
 
