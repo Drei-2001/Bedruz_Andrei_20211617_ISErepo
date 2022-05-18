@@ -40,7 +40,7 @@ public  class StringNumber
         }
     }
 
-    public static void removeNumsToCase(String s, boolean lowerCase)
+    public static String removeNums(String s)
     {
         StringBuilder sb = new StringBuilder(s);
         int count = 0,size = sb.length();
@@ -55,18 +55,10 @@ public  class StringNumber
             else 
             {
                 count++;
-            }
-            System.out.println();
+            }  
         }
-        
-        if (lowerCase == true)
-        {
-            s = sb.toString().toLowerCase();
-        }
-        else if (lowerCase == false)
-        {
-            s = sb.toString().toUpperCase();
-        }
-        System.out.println("Final String = " + s);
+        s = sb.toString();
+            return s;
     }
+
 }
