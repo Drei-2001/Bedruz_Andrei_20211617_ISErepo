@@ -11,7 +11,14 @@ public class AllConversions
 
         while(endLoop1 == false)
         {
-            Options();
+            System.out.println("String manipulation Software");
+            System.out.println("[1] Convert String to upper Case");
+            System.out.println("[2] Convert String to lower Case");
+            System.out.println("[3] Check if String has a valid number");
+            System.out.println("[4] Check if String is a valid number");
+            System.out.println("[5] Remove numbers in string and change case");
+            System.out.println("[6] Conversion System (meters and feet/ centimeters to inches");
+            System.out.println("[7] Exit");
             int choice1 = sc.nextInt();
             sc.nextLine();
             switch (choice1)
@@ -52,12 +59,14 @@ public class AllConversions
                     String inputTwo = sc.nextLine();
                     if (inputTwo.equals("U"))
                     {
-                    StringNumber.removeNumsToCase(string, false);
+                        string  = StringNumber.removeNums(string);
+                        System.out.println("New String  = "+StringNumber.toUpperCase(string) + "\n");
 
                     }
                     else if (inputTwo.equals("L"))
                     {
-                        StringNumber.removeNumsToCase(string, true);
+                        string = StringNumber.removeNums(string);
+                        System.out.println("New String  = "+StringNumber.toLowerCase(string) + "\n");
                     }
                     else 
                     {
@@ -68,7 +77,11 @@ public class AllConversions
 
                 //Conversions
                 case 6:
-                    Options2();
+                    System.out.println("Convertion System");
+                    System.out.println("[1] Convert hours to minutes");
+                    System.out.println("[2] Convert minutes to hours");
+                    System.out.println("[3] Convert minutes to seconds");
+                    System.out.println("[4] Convert seconds to minutes");
                     int optionsTwo = sc.nextInt();
                     double timeInput,timeResult;
                     switch(optionsTwo)
@@ -103,8 +116,8 @@ public class AllConversions
                     }
                     string = sc.nextLine();
                     System.out.println("\n");
-
                     break;
+                //exit
                 case 7:
                     endLoop1 = true;
                     break;                
@@ -116,26 +129,4 @@ public class AllConversions
         System.out.println("GoodBye!");
         sc.close();
     }
-
-    public static void Options()
-    {
-        System.out.println("String manipulation Software");
-        System.out.println("[1] Convert String to upper Case");
-        System.out.println("[2] Convert String to lower Case");
-        System.out.println("[3] Check if String has a valid number");
-        System.out.println("[4] Check if String is a valid number");
-        System.out.println("[5] Remove numbers in string and change case");
-        System.out.println("[6] Conversion System (meters and feet/ centimeters to inches");
-        System.out.println("[7] Exit");
-    }
-
-    public static void Options2()
-    {
-        System.out.println("Convertion System");
-        System.out.println("[1] Convert hours to minutes");
-        System.out.println("[2] Convert minutes to hours");
-        System.out.println("[3] Convert minutes to seconds");
-        System.out.println("[4] Convert seconds to minutes");
-    }
-
 }
