@@ -1,5 +1,14 @@
 public  class StringNumber 
 {
+    public static String toUpperCase(String s)
+    {
+        return s.toUpperCase();
+    }
+
+    public static String toLowerCase(String s)
+    {
+        return s.toLowerCase();
+    }
     public static void checkForNums(String s)
     {
         //try to change each glyph in the string to a number. If an error occurs, move 
