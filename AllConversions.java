@@ -7,7 +7,7 @@ public class AllConversions
 
         Scanner sc = new Scanner(System.in);
         boolean endLoop1 = false;
-        String string;
+        String inputStr;
 
         while(endLoop1 == false)
         {
@@ -26,47 +26,47 @@ public class AllConversions
                 //upperCase
                 case 1:
                     System.out.println("Input String:");
-                    string = sc.nextLine();
-                    System.out.println("String = " + StringNumber.toUpperCase(string) + "\n\n");
+                    inputStr = sc.nextLine();
+                    System.out.println("String = " + StringNumber.toUpperCase(inputStr) + "\n\n");
                     break;
                 //lowerCase
                 case 2:
                     System.out.println("Input String:");
-                    string = sc.nextLine();
-                    System.out.println("String = " + StringNumber.toUpperCase(string) + "\n\n");
+                    inputStr = sc.nextLine();
+                    System.out.println("String = " + StringNumber.toUpperCase(inputStr) + "\n\n");
                     break;
                 //hasNumber
                 case 3:
                     System.out.println("Input String:");
-                    string = sc.nextLine();
-                    StringNumber.checkForNums(string);
+                    inputStr = sc.nextLine();
+                    StringNumber.checkForNums(inputStr);
                     System.out.println("\n");
 
                     break;    
                 //isNumber
                 case 4:
                     System.out.println("Input String:");
-                    string = sc.nextLine();
-                    StringNumber.checkIfNum(string);
+                    inputStr = sc.nextLine();
+                    StringNumber.checkIfNum(inputStr);
                     System.out.println("\n");
 
                     break;
                 //Remove Numbers and change case
                 case 5:
                     System.out.println("Input String:");
-                    string = sc.nextLine();
+                    inputStr = sc.nextLine();
                     System.out.println("Change to [U]pperCase or [L]owerCase?");
                     String inputTwo = sc.nextLine();
                     if (inputTwo.equals("U"))
                     {
-                        string  = StringNumber.removeNums(string);
-                        System.out.println("New String  = "+StringNumber.toUpperCase(string) + "\n");
+                        inputStr  = StringNumber.removeNums(inputStr);
+                        System.out.println("New String  = "+StringNumber.toUpperCase(inputStr) + "\n");
 
                     }
                     else if (inputTwo.equals("L"))
                     {
-                        string = StringNumber.removeNums(string);
-                        System.out.println("New String  = "+StringNumber.toLowerCase(string) + "\n");
+                        inputStr = StringNumber.removeNums(inputStr);
+                        System.out.println("New String  = "+StringNumber.toLowerCase(inputStr) + "\n");
                     }
                     else 
                     {
@@ -114,7 +114,8 @@ public class AllConversions
                             System.out.println("wrong Input. Please try again");
                             break;
                     }
-                    string = sc.nextLine();
+                    //includes a space. fixes nextLine error
+                    sc.nextLine();
                     System.out.println("\n");
                     break;
                 //exit
