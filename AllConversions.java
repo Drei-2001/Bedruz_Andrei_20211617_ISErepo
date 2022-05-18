@@ -20,13 +20,13 @@ public class AllConversions
                 case 1:
                     System.out.println("Input String:");
                     string = sc.nextLine();
-                    System.out.println("String = " + string.toUpperCase() + "\n\n");
+                    System.out.println("String = " + StringNumber.toUpperCase(string) + "\n\n");
                     break;
                 //lowerCase
                 case 2:
                     System.out.println("Input String:");
                     string = sc.nextLine();
-                    System.out.println("String = " + string.toLowerCase() + "\n\n");
+                    System.out.println("String = " + StringNumber.toUpperCase(string) + "\n\n");
                     break;
                 //hasNumber
                 case 3:
@@ -52,12 +52,14 @@ public class AllConversions
                     String inputTwo = sc.nextLine();
                     if (inputTwo.equals("U"))
                     {
-                    StringNumber.removeNumsToCase(string, false);
+                        string  = StringNumber.removeNums(string);
+                        System.out.println("String  = "+StringNumber.toUpperCase(string) + "\n");
 
                     }
                     else if (inputTwo.equals("L"))
                     {
-                        StringNumber.removeNumsToCase(string, true);
+                        string = StringNumber.removeNums(string);
+                        System.out.println("String  = "+StringNumber.toUpperCase(string) + "\n");
                     }
                     else 
                     {
