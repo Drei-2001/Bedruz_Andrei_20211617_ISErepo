@@ -9,4 +9,5 @@ public class Conversions
     {
         return min/60;
     }   
+    
 }

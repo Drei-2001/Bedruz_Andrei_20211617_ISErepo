@@ -9,6 +9,7 @@ public  class StringNumber
     {
         return s.toLowerCase();
     }
+    
     public static void checkForNums(String s)
     {
         //try to change each glyph in the string to a number. If an error occurs, move 
