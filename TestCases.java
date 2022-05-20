@@ -83,11 +83,11 @@ public class TestCases
 
     public static void testMinToHr()
     {
-        double temp = Conversions.hrToMin(60);
+        double temp = Conversions.minToHr(60);
         assert temp == 1.0 : "test hours > 0 failed";
-        temp = Conversions.hrToMin(-600);
+        temp = Conversions.minToHr(-600);
         assert temp == -10.0: "test hours < 0 failed";
-        temp = Conversions.hrToMin(0);
+        temp = Conversions.minToHr(0);
         assert temp == 0.0 : "test hours = 0 failed";
 
         //prints if everything passes
