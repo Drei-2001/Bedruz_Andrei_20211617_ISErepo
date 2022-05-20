@@ -47,12 +47,12 @@ public class TestCases
 
     public static void testCheckForNums()
     {
-
+        //cannot be tested using assert
     }
 
     public static void testCheckIfNums()
     {
-
+        //cannot be tested using assert
     }
 
     public static void testCheckRemoveNums()
