@@ -57,16 +57,40 @@ public class TestCases
 
     public static void testCheckRemoveNums()
     {
-
+        String temp = StringNumber.removeNums("11617");
+        assert temp.equals(""): "test '11617' failed";
+        temp = StringNumber.removeNums("a2ndr3ei B8e765d0ruZ");
+        assert temp.equals("andrei BedruZ"): "test 'a2ndr3ei B8e765d0ruZ' failed";
+        temp = StringNumber.removeNums("The GodFather");
+        assert temp.equals("The GodFather"): " test 'The GodFather' has passed";
+        
+        //prints if everything passes
+        System.out.println("checkRemoveNums passed");
     }
 
     public static void testHrToMin()
     {
+        double temp = Conversions.hrToMin(1);
+        assert temp == 60.0 : "test hours > 0 failed";
+        temp = Conversions.hrToMin(-10);
+        assert temp == -600.0: "test hours < 0 failed";
+        temp = Conversions.hrToMin(0);
+        assert temp == 0.0 : "test hours = 0 failed";
 
+        //prints if everything passes
+        System.out.println("hrToMin passed");
     }
 
     public static void testMinToHr()
     {
-        
+        double temp = Conversions.hrToMin(60);
+        assert temp == 1.0 : "test hours > 0 failed";
+        temp = Conversions.hrToMin(-600);
+        assert temp == -10.0: "test hours < 0 failed";
+        temp = Conversions.hrToMin(0);
+        assert temp == 0.0 : "test hours = 0 failed";
+
+        //prints if everything passes
+        System.out.println("minToHr passed");
     }
 }
